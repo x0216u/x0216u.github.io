@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://x0216u.github.io/"/>
-  <updated>2017-10-12T06:15:25.893Z</updated>
+  <updated>2017-10-12T08:59:56.384Z</updated>
   <id>http://x0216u.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>flower.py</title>
+    <link href="http://x0216u.github.io/2017/10/12/flower-py/"/>
+    <id>http://x0216u.github.io/2017/10/12/flower-py/</id>
+    <published>2017-10-12T08:57:41.000Z</published>
+    <updated>2017-10-12T08:59:56.384Z</updated>
+    
+    <content type="html"><![CDATA[<p>import numpy as np</p><p>import matplotlib.pyplot as plt</p><p>from sklearn import datasets , linear_model</p><p>def load_planar_dataset(): m = 400 #总样本数 N = int(m/2) #每种样本数</p><p>D = 2 #维数 颜色<br>a = 4 #花瓣延伸的最大长度<br>X = np.zeros((m,D)) #初始化样本矩阵 [400 2]<br>Y = np.zeros(m, dtype=’uint8’) #初始化标签矩阵，0为红色，1为蓝色</p><p>#随机分配样本坐标，使样本组成一朵花形<br>for j in range(2):<br>    ix = range(N<em>j,N</em>(j+1)) #0-200 200-400<br>    t = np.linspace(j<em>3.12,(j+1)</em>3.12,N) + np.random.randn(N)<em>0.2 #角度 (0,pi) 取两百个数 +<br>    r = a</em>np.sin(4<em>t) + np.random.randn(N)</em>0.2 #半径<br>    X[ix] = np.c<em>[r<em>np.sin(t),r</em>np.cos(t)]  #c</em>[x,y]=&gt;[ [x0,y0],[x1,y1]]<br>    Y[ix] = j<br>X = X.T</p><p>plt.ylabel(‘y’)<br>plt.xlabel(‘x’)<br>plt.scatter(X[0,:], X[1,:], c=Y,s=40, cmap=plt.cm.Spectral)<br>return X, Y.reshape(1,m)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;import numpy as np&lt;/p&gt;
+&lt;p&gt;import matplotlib.pyplot as plt&lt;/p&gt;
+&lt;p&gt;from sklearn import datasets , linear_model&lt;/p&gt;
+&lt;p&gt;def load_planar_datas
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>反正有大把时光</title>
